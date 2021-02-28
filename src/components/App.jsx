@@ -1,5 +1,6 @@
 import React from "react";
 import Login from "../components/Login";
+import Time from "./Time";
 
 var isLoggedIn = false;
 
@@ -13,9 +14,10 @@ var isLoggedIn = false;
 
 function App() {
   return (
-    <div className="container">{
+    <div className="container">
       <Login userLoggedIn={isLoggedIn}/>
-    }</div>
+      <Time />
+    </div>
   );
 }
 
