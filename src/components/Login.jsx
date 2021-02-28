@@ -1,19 +1,16 @@
 import React from "react";
-import Input from "../components/Input"
+import Input from "./Input"
 
-function Login() {
+function Login(props) {
     return (
-        <form className="form">
-        <Input 
-            type="text"
-            placeholder="Username"
-        />
-        <Input 
-            type="password"
-            placeholder="Password"
-        />
-    <button type="submit">Login</button>
-  </form>
+    <form className="form">
+        <Input  type="text" placeholder="Username" />
+        <Input type="password" placeholder="Password" />
+        {props.userLoggedIn && <Input type="password" placeholder="Confirm Password" />}
+        <button type="submit">
+            {props.userLoggedIn ? "Reagister" : "Login"}
+        </button>
+    </form>
     )
 }
 
